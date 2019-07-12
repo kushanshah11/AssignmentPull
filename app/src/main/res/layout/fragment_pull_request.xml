@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/item_margin_10"
+        android:layout_marginBottom="@dimen/item_margin_10"
+        android:layout_marginStart="@dimen/item_margin_10"
+        android:layout_marginEnd="@dimen/item_margin_10"
+        android:background="@color/app_background">
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_seacrh"
+            android:layout_marginTop="@dimen/item_margin_5"
+            android:layout_marginEnd="@dimen/item_margin_5"
+            android:layout_marginStart="@dimen/item_margin_10"
+            android:backgroundTint="@color/colorPrimary"
+            style="@style/style_editText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSearch"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_margin_35"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_layout"
+            android:backgroundTint="@color/colorPrimary"
+            app:layout_constraintStart_toEndOf="@+id/etSearch"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/item_margin_5"
+            android:layout_marginEnd="@dimen/item_margin_10"
+            android:layout_marginStart="@dimen/item_margin_5"
+            app:layout_constraintBottom_toBottomOf="@id/etSearch"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPullRequests"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/item_margin_5"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etSearch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/row_pull_request"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

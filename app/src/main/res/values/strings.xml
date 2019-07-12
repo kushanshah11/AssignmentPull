@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Git Pull App</string>
+    <string name="retry">Retry</string>
+    <string name="hint_seacrh">OwnerName/RepoName</string>
+    <string name="search">Search</string>
+    <string name="something_went_wrong">Oops,something went wrong. Please try again.</string>
+    <string name="arrow_symbol">↓</string>
+</resources>
